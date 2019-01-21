@@ -1,0 +1,85 @@
+@mixin breakpoint($point) {
+
+	@if $point == fullhd {
+		@media
+		screen and (min-mobile-width: $fullhd),
+		screen and (min-width: $fullhd) {
+			@content;
+		}
+	}
+
+	@else if $point == desktop {
+		@media
+		screen and (max-width: $desktop) and (min-width: $tablet) {
+			@content;
+		}
+	}
+
+	@else if $point == tablet {
+		@media
+		screen and (max-width: $tablet) and (min-width: $mobile),
+		screen and (max-mobile-width: $tablet) and (min-mobile-width: $mobile) {
+			@content;
+		}
+	}
+
+	@else if $point == mobile {
+		@media
+		screen and (max-mobile-width: $mobile),
+		screen and (max-width: $mobile)  {
+			@content;
+		}
+	}
+
+
+	@else if $point == fullhd-desktop {
+		@media
+		screen and (max-mobile-width: $fullhd),
+		screen and (max-width: $fullhd) {
+			@content;
+		}
+	}
+
+	@else if $point == fullhd-tablet {
+		@media
+		screen and (max-width: $fullhd) and (min-width: $tablet),
+		screen and (max-mobile-width: $fullhd) and (min-mobile-width: $tablet) {
+			@content;
+		}
+	}
+
+	@else if $point == fullhd-mobile {
+		@media
+		screen and (max-mobile-width: $fullhd),
+		screen and (max-width: $fullhd) {
+			@content;
+		}
+	}
+
+
+	@else if $point == desktop-tablet {
+		@media
+		screen and (max-width: $desktop) and (min-width: $mobile),
+		screen and (max-mobile-width: $desktop) and (min-mobile-width: $mobile) {
+			@content;
+		}
+	}
+
+	@else if $point == desktop-mobile	{
+		@media
+		screen and (max-mobile-width: $desktop),
+		screen and (max-width: $desktop) {
+			@content;
+		}
+	}
+
+
+	@else if $point == tablet-mobile {
+		@media
+		screen and (max-mobile-width: $tablet),
+		screen and (max-width: $tablet) {
+			@content;
+		}
+	}
+
+}

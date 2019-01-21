@@ -1,0 +1,9 @@
+@import '../base/_variables.scss';
+@import '../base/_mediaquery.scss';
+
+.hero {
+  display: grid;
+}
+@include breakpoint(mobile) {
+
+}

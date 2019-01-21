@@ -1,0 +1,86 @@
+@import '../base/_variables.scss';
+
+.mainHead {
+  background: rgba(white, 0.8);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  z-index: 99;
+  .topBar {
+    width: 100%;
+    height: $topBarHeight;
+    background: $primary;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: $mainBarHeight / 8;
+    .headIcon {
+      cursor: pointer;
+      width: auto;
+      height: $topBarHeight;
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 12px;
+      line-height: 12px;
+      color: $white;
+      font-weight: 400;
+      letter-spacing: 1px;
+      vertical-align: middle;
+      padding: $mainBarHeight / 8;
+      svg {
+        height: 100%;
+        vertical-align: middle;
+        box-sizing: border-box;
+        fill: $white;
+        padding: 0 5px;
+      }
+      &:hover {
+        opacity: 0.5;
+        svg {
+          // fill: $primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .mainBar {
+    position: relative;
+    width: 100%;
+    nav {
+      position: absolute;
+      right: $mainBarHeight / 4;
+      top: $mainBarHeight / 4;
+      height: $mainBarHeight / 2;
+      display: flex;
+      align-items: center;
+      a {
+        margin-left: 20px;
+        font-weight: 400;
+        color: $grey;
+        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+          color: $primary;
+        }
+      }
+    }
+  }
+  .linkActive {
+    color: $primary;
+  }
+  .brand {
+    background: thistle;
+    position: absolute;
+    left: $mainBarHeight / 4;
+    top: $mainBarHeight / 4;
+    height: $mainBarHeight / 2;
+    width: auto;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
