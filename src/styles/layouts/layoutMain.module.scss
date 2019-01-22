@@ -1,5 +1,11 @@
 @import '../base/_variables.scss';
+@import '../base/_mediaquery.scss';
 
 .main {
   padding-top: $headerHeight;
+}
+@include breakpoint(mobile) {
+  .main {
+    padding-top: $mainBarHeight;
+  }
 }
