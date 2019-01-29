@@ -47,7 +47,7 @@ class Header extends React.Component {
 
           <header className={`${styles.mainHead} ${this.state.showMenu ? 'menuActive' : ''}`}>
 
-            <div className={styles.topBar} >
+            <div className={styles.topBar}>
               <a className={styles.headIcon} href={hrefFunc('mailto:', data.datoCmsSiteGlobal.email)} > <Email />{data.datoCmsSiteGlobal.email}</a>
               <a className={styles.headIcon} href={hrefFunc('tel:', data.datoCmsSiteGlobal.telephoneNumber)}><Phone />{data.datoCmsSiteGlobal.telephoneNumber}</a>
             </div>
@@ -63,6 +63,10 @@ class Header extends React.Component {
                 <Link to="/services/" activeClassName={styles.linkActive}>Services</Link>
                 <Link to="/about/" activeClassName={styles.linkActive}>About</Link>
                 <Link to="/contact/" activeClassName={styles.linkActive}>Contact</Link>
+                <div className={styles.navBtn}>
+                  <a href={hrefFunc('mailto:', data.datoCmsSiteGlobal.email)} > <Email />Email</a>
+                  <a href={hrefFunc('tel:', data.datoCmsSiteGlobal.telephoneNumber)}><Phone />Call</a>
+                </div>
               </nav>
             </div>
           </ header >

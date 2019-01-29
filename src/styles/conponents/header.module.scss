@@ -76,6 +76,9 @@
           color: $primary;
         }
       }
+      .navBtn {
+        display: none;
+      }
     }
   }
   .linkActive {
@@ -125,16 +128,41 @@
         transition: 0.25s all ease-out;
         z-index: 1;
         opacity: 0;
+        a {
+          margin-left: 0;
+          padding: 20px;
+        }
+        .navBtn {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          bottom: 0;
+          padding: 10px;
+          background: $primary;
           a {
-            margin-left: 0;
-            padding: 20px;
+            width: 50%;
+            text-align: center;
+            font-size: 14px;
+            padding: 5px;
+            display: inline-block;
+            color: $white;
+            svg {
+              width: 30px;
+              display: block;
+              margin: 5px auto;
+              fill: $white;
+            }
           }
+          
+        }
       }
       .navOpen {
           opacity: 1;
           transform: translate3d(0, 0, 0);
         }
-    }
+      }
     .brand {
       height: 40px;
       z-index: 3;
