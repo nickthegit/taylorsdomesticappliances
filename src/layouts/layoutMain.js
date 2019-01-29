@@ -10,7 +10,6 @@ import styles from "../styles/layouts/layoutMain.module.scss"
 export default ({ children }) => (
   <div>
     <Header />
-    {/* <img src="{logo}" alt="logo" /> */}
     <main className={styles.main}>
       {children}
     </main>
