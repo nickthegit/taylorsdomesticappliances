@@ -79,10 +79,10 @@
       .navBtn {
         display: none;
       }
+      .linkActive {
+        color: $primary;
+      }
     }
-  }
-  .linkActive {
-    color: $primary;
   }
   .brand {
     position: absolute;

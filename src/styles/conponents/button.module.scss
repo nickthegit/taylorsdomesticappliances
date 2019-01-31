@@ -1,0 +1,32 @@
+@import '../base/_variables.scss';
+@import '../base/_mediaquery.scss';
+
+
+.btn, .alt {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: 300;
+  display: inline-block;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  color: $white;
+  background: $primary;
+  &:hover, &:focus, &:active {
+    background: rgba($primary, 0.8);
+  }
+}
+
+.alt {
+  color: $primary;
+  background: transparent;
+  border: 2px solid $primary;
+  &:hover, &:focus, &:active {
+    background: $primary;
+    color: $white;
+  }
+}

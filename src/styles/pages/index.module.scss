@@ -1,0 +1,93 @@
+@import '../base/_variables.scss';
+@import '../base/_mediaquery.scss';
+
+.main {
+  background: #f3f3f3;
+  width: 100%;
+  section {
+    padding: 80px 40px;
+    width: 100%;
+  }
+  article {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.intro {
+  background: $white;
+  box-shadow: 0px 2px 20px 5px rgba($black, 0.05);
+  article {
+    text-align: center;
+    display: block;
+    max-width: 600px;
+    a { 
+      margin-top: 20px;
+    }
+  }
+}
+
+
+.whatwefix {
+  article {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 50% calc(50% - 40px);
+    grid-template-rows: auto;
+    grid-column-gap: 40px;
+    align-items: center;
+    a { 
+      margin-top: 20px;
+    }
+  }
+  div {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  figure {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.area {
+  background: $white;
+  box-shadow: 0px -2px 20px 5px rgba($black, 0.05);
+  article {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: calc(50% - 40px) 50% ;
+    grid-template-rows: auto;
+    grid-column-gap: 40px;
+    align-items: center;
+    a { 
+      margin-top: 20px;
+    }
+  }
+  div {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: right;
+  }
+  figure {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
